@@ -15,9 +15,9 @@ readFileAsync('./input.txt', {encoding: 'utf8'})
       throw new Error(`Roomba starting coordinates of ${roombaStartCoordinates} are outside the room`);
     }
 
-    const [roombaCoordinates, spotsCleaned] = activateRoomba(roombaStartCoordinates, dirtCoordinates, instructions, roomCoordinates);
+    const [roombaEndCoordinates, spotsCleaned] = activateRoomba(roombaStartCoordinates, dirtCoordinates, instructions, roomCoordinates);
     
-    console.log(roombaCoordinates.join(' '), `\n${spotsCleaned}`)
+    console.log(roombaEndCoordinates.join(' '), `\n${spotsCleaned}`)
   })
   .catch((err) => {
       console.log('ERROR:', err);
