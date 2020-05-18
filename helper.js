@@ -1,10 +1,10 @@
-const activateRoomba = (roombaStartCoordinates, dirtLocations, instructions, roomCoordinates) => {
+const activateRoomba = (roombaStartCoordinates, dirtCoordinates, instructions, roomCoordinates) => {
   let roombaLocation = roombaStartCoordinates.slice();
   let spotsCleaned = 0;
   const [roomX, roomY] = roomCoordinates;
 
-  if (dirtLocations.has(roombaLocation.join(' '))) {
-    dirtLocations.delete(roombaLocation.join(' '));
+  if (dirtCoordinates.has(roombaLocation.join(' '))) {
+    dirtCoordinates.delete(roombaLocation.join(' '));
     spotsCleaned++;
   }
   
@@ -26,8 +26,8 @@ const activateRoomba = (roombaStartCoordinates, dirtLocations, instructions, roo
       roombaLocation[0]--;
     }
   
-    if (dirtLocations.has(roombaLocation.join(' '))) {
-      dirtLocations.delete(roombaLocation.join(' '));
+    if (dirtCoordinates.has(roombaLocation.join(' '))) {
+      dirtCoordinates.delete(roombaLocation.join(' '));
       spotsCleaned++;
     }
   }
