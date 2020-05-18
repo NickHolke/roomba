@@ -2,7 +2,6 @@ Step 1: Clone the repository with the command 'git clone https://github.com/Nick
 
 Step 2: There is an empty file 'input.txt' in the roomba folder. Either copy and paste directions into this file or delete it
 and add your own 'input.txt' file. The format of the file should be as follows:
-
 5 5
 1 2
 1 0
