@@ -17,7 +17,7 @@ readFileAsync('./input.txt', {encoding: 'utf8'})
 
     const [roombaCoordinates, spotsCleaned] = activateRoomba(roombaStartCoordinates, dirtCoordinates, instructions, roomCoordinates);
     
-    console.log(roombaCoordinates.join(' '), '\n' + spotsCleaned)
+    console.log(roombaCoordinates.join(' '), `\n${spotsCleaned}`)
   })
   .catch((err) => {
       console.log('ERROR:', err);
